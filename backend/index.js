@@ -1,8 +1,7 @@
 const express = require('express');
-const mongoose = require('mongoose');
+require('./db/config');
 
-const app = express();
-
+/*const mongoose = require('mongoose');
 const connectDB = async()=>{
     mongoose.connect('mongodb://127.0.0.1:27017/e-comm');
     const productSchema = new mongoose.Schema({});
@@ -10,10 +9,18 @@ const connectDB = async()=>{
     const data = await product.find();
     console.warn(data);
 }
+*/
 
 /*app.get("/",(req,resp)=>{
     resp.send("app is working");
 });
 */
-connectDB();  
+//connectDB();  
+
+const User = require('./db/User');
+const app = express();
+
+app.post();
+
+
 app.listen(5000);
